@@ -4,6 +4,7 @@ const errorHandler = require('../common/errorHandler')
 Caixa.methods([ 'get', 'post', 'put', 'delete'])
 Caixa.updateOptions({new: true, runValidators: true})
 Caixa.after('post', errorHandler).after('put', errorHandler)
+//urlLocal: 'mongodb://localhost/cursoangular',
 
 // Caixa.route('', (req, res, next) => {
 //     Caixa.find((error, value) => {
