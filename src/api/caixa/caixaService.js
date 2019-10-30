@@ -5,6 +5,7 @@ Caixa.methods([ 'get', 'post', 'put', 'delete'])
 Caixa.updateOptions({new: true, runValidators: true})
 Caixa.after('post', errorHandler).after('put', errorHandler)
 //urlLocal: 'mongodb://localhost/cursoangular',
+//urlLocal: 'mongodb://admincursoangular:nYg9TBuM7ytTpz7@ds157493.mlab.com:57493/heroku_fwzh2f2f/cursoangular',
 
 // Caixa.route('', (req, res, next) => {
 //     Caixa.find((error, value) => {

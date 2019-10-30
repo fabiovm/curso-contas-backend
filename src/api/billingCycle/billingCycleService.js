@@ -35,6 +35,11 @@ BillingCycle.route('count', (req, res, next) => {
     })
 })
 
+/**
+ * @name BillingCycle
+ * @description
+ * Sumary de debito e credito.
+ */
 BillingCycle.route('summary', (req, res, next) => {
     BillingCycle.aggregate([{
         $project: {credit: {$sum: "$credits.value"}, debt: {$sum: "$debts.value"}}
