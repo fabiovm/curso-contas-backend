@@ -17,8 +17,6 @@ BillingCycle.route('', (req, res, next) => {
     let orderBy = orderByToMongo(req)
     const skip = req.query.skip ? req.query.skip : LIST.SKIP_DEFAULT
     const limit = req.query.limit ? req.query.limit : LIST.LIMIT_DEFAULT
-    //req.headers.json({"x-count": 0})
-    //console.log('orderBy: '+orderBy)
     BillingCycle.find((error, value) => {
         if (error) {
             res.status(500).json({ errors: [error] })
