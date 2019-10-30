@@ -7,6 +7,11 @@ BillingCycle.methods([ 'get', 'post', 'put', 'delete'])
 BillingCycle.updateOptions({new: true, runValidators: true})
 BillingCycle.after('post', errorHandler).after('put', errorHandler)
 
+/**
+ * @name BillingCycle
+ * @description
+ * rota padrão
+ */
 BillingCycle.route('', (req, res, next) => {
     let total = {};
     let orderBy =  orderByToMongo(req)
