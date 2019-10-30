@@ -25,6 +25,11 @@ BillingCycle.route('', (req, res, next) => {
     
 })
 
+/**
+ * @name BillingCycle
+ * @description
+ * Count de debito e credito.
+ */
 BillingCycle.route('count', (req, res, next) => {
     BillingCycle.countDocuments((error, value) => {
         if(error) {
